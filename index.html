@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bosque de Azúcar — Pastelería de Princesas</title>
+  <meta name="description" content="Pasteles, galletas y cupcakes con temática de princesas y personajes ficticios.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">🍰</div>
+        <div>
+          <h1>Bosque de Azúcar</h1>
+          <p class="tag">Pastelería · Pasteles personalizados · Galletas · Cupcakes</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#pedido">Haz tu pedido</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Endulza tus sueños con una temática de princesas</h2>
+        <p>Pasteles, galletas y cupcakes personalizados para fiestas infantiles y eventos especiales.</p>
+        <a class="btn-primary" href="#pedido">Pedir ahora</a>
+      </div>
+      <div class="hero-image">
+        <!-- Replace with a licensed image or your own artwork -->
+        <div class="image-placeholder">IMAGEN DE PRINCESAS (SUSTITUIR)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="products container">
+    <h3>Nuestros productos</h3>
+    <div class="grid">
+      <div class="card">
+        <div class="card-img">PASTEL</div>
+        <h4>Pastel personalizado</h4>
+        <p>Desde $30 — Temática, sabores y tamaño a elección.</p>
+        <ul>
+          <li>Decoración con fondant</li>
+          <li>Topper personalizado (recomendado: arte original o imágenes licenciadas)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-img">GALLETAS</div>
+        <h4>Galletas decoradas</h4>
+        <p>Desde $5 — Paquetes personalizados para souvenirs.</p>
+      </div>
+      <div class="card">
+        <div class="card-img">CUPCAKES</div>
+        <h4>Cupcakes</h4>
+        <p>Desde $3.50 — Sabores variados y decoraciones temáticas.</p>
+      </div>
+    </div>
+    <p class="note"><strong>Importante sobre imágenes y personajes:</strong> Si deseas decoraciones con personajes con copyright (por ejemplo, personajes de Disney), debes asegurarte de tener la licencia o permiso correspondiente. Recomendamos usar arte original inspirado en princesas o solicitar las imágenes/licencias al cliente.</p>
+  </section>
+
+  <section id="galeria" class="gallery container">
+    <h3>Galería</h3>
+    <div class="gallery-grid">
+      <!-- Placeholder images - replace with licensed photos or originals -->
+      <div class="thumb">Imagen 1 (sustituir)</div>
+      <div class="thumb">Imagen 2 (sustituir)</div>
+      <div class="thumb">Imagen 3 (sustituir)</div>
+      <div class="thumb">Imagen 4 (sustituir)</div>
+    </div>
+  </section>
+
+  <section id="pedido" class="order container">
+    <h3>Haz tu pedido</h3>
+    <form id="orderForm" onsubmit="submitForm(event)">
+      <div class="form-row">
+        <label>Nombre</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-row">
+        <label>Teléfono o WhatsApp</label>
+        <input type="text" id="phone" required>
+      </div>
+      <div class="form-row">
+        <label>Producto</label>
+        <select id="product">
+          <option>Pastel personalizado</option>
+          <option>Galletas decoradas</option>
+          <option>Cupcakes</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Fecha del evento</label>
+        <input type="date" id="date" required>
+      </div>
+      <div class="form-row">
+        <label>Descripción del diseño (aquí indique si desea personajes con copyright)</label>
+        <textarea id="details" rows="4"></textarea>
+      </div>
+      <div class="form-row">
+        <button class="btn-primary" type="submit">Enviar pedido</button>
+      </div>
+    </form>
+    <p class="small">Al enviar el pedido recibirás instrucciones por WhatsApp o correo (configurar manualmente para producción).</p>
+  </section>
+
+  <section id="contacto" class="contact container">
+    <h3>Contacto</h3>
+    <p>Tel: (55) 5309-3390</p>
+    <p>Email: pedidos@bosquedeazucar.com</p>
+    <p>Sitio original: <a href="http://www.bosquedeazucar.com" target="_blank" rel="noopener">bosquedeazucar.com</a></p>
+    <p class="license-note"><strong>Nota legal:</strong> No incluimos imágenes de personajes con copyright. Para usar personajes de Disney u otros creadores, obtén las licencias correspondientes o proporciona imágenes con permiso de uso.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Bosque de Azúcar — Diseño de ejemplo</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      alert('Gracias, ' + name + '! Hemos recibido tu pedido (este es un demo).');
+      document.getElementById('orderForm').reset();
+    }
+  </script>
+</body>
+</html>
